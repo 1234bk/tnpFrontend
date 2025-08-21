@@ -68,7 +68,7 @@ const Footer = () => {
 >
   About
 </h1>
-            <Link to="/comtact" className="hover:underline">Contact Us</Link>
+            <Link to="/contact" className="hover:underline">Contact Us</Link>
             <Link to="https://pcte.edu.in/international-collaborations/" className="hover:underline">International Collaborations</Link>
             <Link to="https://pcte.edu.in/e-cell/" className="hover:underline">E-Cell</Link>
             <Link to="https://pcte.edu.in/campus-life/" className="hover:underline">Campus Life</Link>

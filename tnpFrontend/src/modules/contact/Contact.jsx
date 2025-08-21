@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
+import { serverURL } from "../../constant/constant";
 const Contact = () => {
   const [members, setMembers] = useState([]);
   const fetchMembers = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/gettpomember");
+      const res = await axios.get(`${serverURL}/api/gettpomember`);
       setMembers(res.data);
       console.log(res.data)
     } catch (error) {

@@ -8,7 +8,7 @@ export default function UserLectures() {
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/guestLecture");
+        const res = await axios.get(`${serverURL}/api/guestLecture`);
         setLectures(Array.isArray(res.data) ? res.data : []);
       } catch (e) {
         console.error("Failed to fetch guest lectures:", e);

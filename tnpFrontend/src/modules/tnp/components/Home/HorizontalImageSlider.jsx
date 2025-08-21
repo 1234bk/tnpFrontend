@@ -12,7 +12,7 @@ const HorizontalImageSlider = () => {
       const fetchImages = async () => {
         try {
           const res = await axios.get(`${serverURL}/api/allpackages`); // adjust URL as needed
-          // res.data is an array of { imageUrl: "..." }
+          
           setImages(res.data.map(pkg => pkg.imageUrl));
         } catch (error) {
           console.error("Failed to fetch package images", error);
