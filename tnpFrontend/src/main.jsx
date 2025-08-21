@@ -7,7 +7,6 @@ import './index.css'; // Ensure this path is correct based on your project struc
 import HomePage from './modules/tnp/pages/HomePage';
  import AllPosts from './modules/tnp/pages/AllPosts';
 import Contact from './modules/contact/Contact';
-import About from './modules/about/About';
 import UserLectures from './modules/guestlecture/pages/UserLecture';
 const router = createBrowserRouter([
   {
@@ -26,11 +25,7 @@ const router = createBrowserRouter([
         // path: '/quiz',
         // element: <Quizhome/>,
       // },
-      ,
-       {
-        path: '/about',
-        element: <About/>,
-      },
+      
       ,
        {
         path: '/contact',
