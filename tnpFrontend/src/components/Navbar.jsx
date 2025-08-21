@@ -37,9 +37,9 @@ const dropdownRef = useRef(null);
         <div className="md:flex  hidden gap-10 text-[#9B1C1C]  text-xl ml-auto">
           <Link to="/allposts" className=" hover:text-red-700">Placement Drives</Link>
           
-                <Link to="/quiz" className=" hover:text-red-700">Prep Quiz</Link>
+                {/* <Link to="/quiz" className=" hover:text-red-700">Prep Quiz</Link> */}
                 <Link to="/guestlecture" className="block  hover:text-red-700">Guest Lecture</Link>
-                <Link to="/placement-scheduler" className="block  hover:text-red-700">Placement Scheduler</Link>
+                {/* <Link to="/placement-scheduler" className="block  hover:text-red-700">Placement Scheduler</Link> */}
               <h1
   className="cursor-pointer"
   onClick={() => window.open('https://pcte.edu.in/about-us/', '_blank')}

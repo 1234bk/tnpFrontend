@@ -23,10 +23,10 @@ const router = createBrowserRouter([
         path: '/allposts',
         element: <AllPosts/>,
       },
-       {
-        path: '/quiz',
-        element: <Quizhome/>,
-      },
+      //  {
+        // path: '/quiz',
+        // element: <Quizhome/>,
+      // },
       ,
        {
         path: '/about',

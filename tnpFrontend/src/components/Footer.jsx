@@ -49,10 +49,10 @@ const Footer = () => {
         <div className="flex-1 max-w-[300px] border border-gray-600 rounded-2xl p-4">
           <h2 className="font-medium text-red-300 text-lg md:text-xl mb-3">For Students:</h2>
           <div className="flex flex-col gap-2 text-sm text-stone-300">
-            <Link to="/placement-drives" className="hover:underline">Placement quiz</Link>
-            <Link to="/prep-quiz" className="hover:underline">Prep Quiz</Link>
+            <Link to="/placement-drives" className="hover:underline">Placement drives</Link>
+            {/* <Link to="/prep-quiz" className="hover:underline">Prep Quiz</Link> */}
             <Link to="/guest-lecture" className="hover:underline">Guest Lecture</Link>
-            <Link to="/placement-scheduler" className="hover:underline">Placement Scheduler</Link>
+            {/* <Link to="/placement-scheduler" className="hover:underline">Placement Scheduler</Link> */}
             <Link to="https://api.whatsapp.com/send?phone=919872090335" className="hover:underline">Reach a Counsellor</Link>
             
           </div>
