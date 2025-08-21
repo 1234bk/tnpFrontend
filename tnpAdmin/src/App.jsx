@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import Sidebar from "./components/sidebar";
+import Sidebar from "./components/Sidebar";
 import "./index.css";
 
 function App() {
