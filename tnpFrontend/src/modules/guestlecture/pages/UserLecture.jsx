@@ -6,6 +6,12 @@ export default function UserLectures() {
   const [lectures, setLectures] = useState([]);
   const [loading, setLoading] = useState(true);
 
+
+  useEffect(() => {
+      window.scrollTo(0, 0); // Scrolls to top-left corner
+    }, []);
+
+    
   useEffect(() => {
     (async () => {
       try {

@@ -19,6 +19,11 @@ const Contact = () => {
     fetchMembers();
   }, []);
 
+
+  useEffect(() => {
+      window.scrollTo(0, 0); // Scrolls to top-left corner
+    }, []);
+    
   return (
     <>
     <div className="min-h-screen">
