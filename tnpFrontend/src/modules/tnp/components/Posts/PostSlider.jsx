@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import PostCard from './PostCard';
 import { Link } from 'react-router-dom';
+import { serverURL } from '../../../../constant/constant';
 
 const PostSlider = () => {
   const [posts, setPosts] = useState([]);

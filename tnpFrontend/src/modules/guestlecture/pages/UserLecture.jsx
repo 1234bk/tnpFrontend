@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { serverURL } from "../../../constant/constant";
 
 export default function UserLectures() {
   const [lectures, setLectures] = useState([]);
