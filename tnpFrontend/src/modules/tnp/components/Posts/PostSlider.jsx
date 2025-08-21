@@ -10,7 +10,7 @@ const PostSlider = () => {
     const fetchPosts = async () => {
       try {
         const limit = window.innerWidth >= 1024 ? 6 : 4;
-        const res = await axios.get(`http://localhost:3000/api/allposts?limit=${limit}`);
+        const res = await axios.get(`${serverURL}/api/allposts?limit=${limit}`);
         setPosts(res.data);
       } catch (err) {
         console.error('Error fetching posts:', err);

@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import axios from "axios";
+import { serverURL } from "../../../../constant/constant";
 
 const CompanySlider = () => {
   const sliderRef = useRef(null);
@@ -10,29 +11,13 @@ const CompanySlider = () => {
     "/fallback3.png",
   ];
 
-  // useEffect(() => {
-  //   const fetchImages = async () => {
-  //     try {
-  //       const res = await axios.get("http://localhost:3000/api/company");
-  //       if (Array.isArray(res.data) && res.data.length > 0) {
-  //         setImages(res.data.map((pkg) => pkg.imageUrl));
-  //       } else {
-  //         setImages(fallbackImages);
-  //       }
-  //     } catch (error) {
-  //       console.error("Failed to fetch company images", error);
-  //       setImages(fallbackImages);
-  //     }
-  //   };
-
-  //   fetchImages();
-  // }, []);
+  
 
      useEffect(() => {
-    // Fetch images from backend
+
     const fetchImages = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/company"); // adjust URL as needed
+        const res = await axios.get(`${serverURL}/api/company`); // adjust URL as needed
         // res.data is an array of { imageUrl: "..." }
         setImages(res.data.map(pkg => pkg.imageUrl));
       } catch (error) {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { serverURL } from '../../../../constant/constant';
 
 const Addpost = () => {
   const [formData, setFormData] = useState({
@@ -19,7 +20,7 @@ const Addpost = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3000/api/addpost', formData); // Replace with your backend route
+      await axios.post(`${serverURL}/api/addpost`, formData); // Replace with your backend route
       alert('Post created successfully!');
       setFormData({
         companyName: '',

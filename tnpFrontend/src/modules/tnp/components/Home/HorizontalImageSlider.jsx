@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
+import { serverURL } from "../../../../constant/constant";
 const HorizontalImageSlider = () => {
   const containerRef = useRef(null);
 
@@ -10,7 +11,7 @@ const HorizontalImageSlider = () => {
       // Fetch images from backend
       const fetchImages = async () => {
         try {
-          const res = await axios.get("http://localhost:3000/api/allpackages"); // adjust URL as needed
+          const res = await axios.get(`${serverURL}/api/allpackages`); // adjust URL as needed
           // res.data is an array of { imageUrl: "..." }
           setImages(res.data.map(pkg => pkg.imageUrl));
         } catch (error) {

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PostCard from "../components/Posts/PostCard";
 import { motion } from "framer-motion";
+import { serverURL } from "../../../constant/constant";
 
 const AllPosts = () => {
 
@@ -19,7 +20,7 @@ const AllPosts = () => {
   const fetchPosts = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:3000/api/allposts`
+        `${serverURL}/api/allposts`
       );
 
       // if (res.data.length < 5) setHasMore(false);
