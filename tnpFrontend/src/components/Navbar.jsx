@@ -38,18 +38,18 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="md:flex  hidden gap-10 text-[#9B1C1C]  text-xl ml-auto">
-          <Link to="/allposts" className=" hover:text-red-700">
+        <div className="md:flex  font-semibold  hidden gap-10 text-[#9B1C1C]  text-xl ml-auto">
+          <Link to="/allposts" className=" hover:text-red-700 hover:scale-115 transform duration-300">
             Placement Drives
           </Link>
 
           {/* <Link to="/quiz" className=" hover:text-red-700">Prep Quiz</Link> */}
-          <Link to="/guestlecture" className="block  hover:text-red-700">
+          <Link to="/guestlecture" className=" hover:scale-115 transform duration-300  text-bold hover:text-red-700">
             Guest Lecture
           </Link>
           {/* <Link to="/placement-scheduler" className="block  hover:text-red-700">Placement Scheduler</Link> */}
           <h1
-            className="cursor-pointer"
+            className="cursor-pointer hover:scale-115 transform duration-300 "
             onClick={() =>
               window.open("https://pcte.edu.in/about-us/", "_blank")
             }
@@ -57,12 +57,12 @@ const Navbar = () => {
             About
           </h1>
 
-          <Link className="hover:text-red-700" to="/contact">
+          <Link className="hover:text-red-700 hover:scale-115 transform duration-300" to="/contact">
             Contact
           </Link>
 
           <h1
-            className="cursor-pointer text-[#9B1C1C] "
+            className="cursor-pointer hover:scale-115 transform duration-300 text-[#9B1C1C] "
             onClick={() => window.open("https://tnp-frontend-d122.vercel.app/")}
           >
             Admin
