@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { serverURL } from "../../../constant/constant";
 
 const Addpost = () => {
   const [formData, setFormData] = useState({
@@ -57,7 +58,7 @@ const Addpost = () => {
 
     setUploading(true);
     try {
-      await axios.post("http://localhost:3000/api/addpost", formDataToSend, {
+      await axios.post(`${serverURL}/api/addpost`, formDataToSend, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`,

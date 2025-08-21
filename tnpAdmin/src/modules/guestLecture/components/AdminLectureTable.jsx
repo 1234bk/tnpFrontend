@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { serverURL } from "../../../constant/constant";
 
 export default function AdminLectureTable() {
   const [lectures, setLectures] = useState([]);
@@ -10,7 +11,7 @@ export default function AdminLectureTable() {
   useEffect(() => {
     const fetchLectures = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/guestLecture");
+        const res = await axios.get(`${serverURL}/api/guestLecture`);
         setLectures(res.data);
       } catch (err) {
         console.error("Error fetching lectures:", err);

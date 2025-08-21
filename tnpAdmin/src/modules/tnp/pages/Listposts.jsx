@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { getUserFromToken } from "../../../components/gettoken";
+import { serverURL } from "../../../constant/constant";
 
 const Listposts = () => {
   const user = getUserFromToken();
@@ -15,7 +16,7 @@ const Listposts = () => {
 
   const fetchPosts = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/allposts");
+      const res = await axios.get(`${serverURL}/api/allposts`);
       setPosts(res.data);
       setFilteredPosts(res.data);
     } catch (err) {

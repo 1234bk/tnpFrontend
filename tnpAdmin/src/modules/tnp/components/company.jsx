@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { serverURL } from "../../../constant/constant";
 
 const Company = () => {
   const [image, setImage] = useState(null);
@@ -20,7 +21,7 @@ const Company = () => {
 
     try {
       setStatus("Uploading...");
-      const res = await axios.post("http://localhost:3000/api/company", formData, {
+      const res = await axios.post(`${serverURL}/api/company`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

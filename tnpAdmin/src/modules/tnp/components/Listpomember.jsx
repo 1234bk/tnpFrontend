@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { serverURL } from "../../../constant/constant";
 
 const Listpomember = () => {
   const [members, setMembers] = useState([]);
@@ -7,7 +8,7 @@ const Listpomember = () => {
 
   const fetchMembers = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/gettpomember");
+      const res = await axios.get(`${serverURL}/api/gettpomember`);
       setMembers(res.data);
     } catch (error) {
       console.error("Error fetching members:", error);

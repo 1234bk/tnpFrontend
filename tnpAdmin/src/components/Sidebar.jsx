@@ -30,7 +30,7 @@ export default function Sidebar({ isOpen, onClose }) {
 
   return (
     <div
-      className={`fixed top-0 left-0 h-screen w-64 bg-[#9B1C1C] text-white transform
+      className={`fixed top-0 left-0 h-screen w-62 bg-[#9B1C1C] text-white transform
         ${isOpen ? "translate-x-0" : "-translate-x-full"}
         transition-transform duration-300 md:translate-x-0`}
       style={{ zIndex: 40 }}
@@ -66,7 +66,7 @@ export default function Sidebar({ isOpen, onClose }) {
           <div className="ml-6 flex flex-col gap-2">
 
             {/* Post Nested Dropdown */}
-            <button
+            {/* <button
               onClick={() => setIsPostOpen(!isPostOpen)}
               className="flex items-center justify-between gap-2 p-2 rounded-lg hover:bg-white hover:text-[#9B1C1C] transition"
             >
@@ -74,10 +74,10 @@ export default function Sidebar({ isOpen, onClose }) {
                 <FaClipboard /> Post
               </span>
               {isPostOpen ? <FaChevronUp /> : <FaChevronDown />}
-            </button>
+            </button> */}
 
-            {isPostOpen && (
-              <div className="ml-6 flex flex-col gap-2">
+            {/* {isPostOpen && ( */}
+              {/* <div className="ml-6 flex flex-col gap-2"> */}
                 <Link
                   to="/addpost"
                   onClick={onClose}
@@ -92,8 +92,8 @@ export default function Sidebar({ isOpen, onClose }) {
                 >
                   📑 List Posts
                 </Link>
-              </div>
-            )}
+              {/* </div> */}
+            {/* )} */}
 
             
             <Link

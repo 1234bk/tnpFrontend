@@ -1,6 +1,7 @@
 // src/components/Addadmin.jsx
 import React, { useState } from "react";
 import axios from "axios";
+import { serverURL } from "../../../constant/constant";
 
 const Addadmin = () => {
 
@@ -30,7 +31,7 @@ const Addadmin = () => {
     setMessage("");
 
     try {
-      const res = await axios.post("http://localhost:3000/api/addadmin", formData);
+      const res = await axios.post(`${serverURL}/api/addadmin`, formData);
       setMessage("Admin added successfully!");
       setFormData({
         name: "",

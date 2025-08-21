@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { serverURL } from "../../../constant/constant";
 
 const Addtpomember = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +23,7 @@ const Addtpomember = () => {
     setMessage("");
 
     try {
-      await axios.post("http://localhost:3000/api/addtpomember", formData);
+      await axios.post(`${serverURL}/api/addtpomember`, formData);
       setMessage("TPO Member added successfully!");
       setFormData({ name: "", role: "",department: "", email: "", contact: "" });
     } catch (error) {

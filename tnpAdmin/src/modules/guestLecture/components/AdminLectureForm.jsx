@@ -1,5 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
+// import { serverURL } from "../../../../../tnpFrontend/src/constant/constant";
+import { serverURL } from "../../../constant/constant";
 
 export default function AdminLectureForm() {
   const [form, setForm] = useState({
@@ -39,7 +41,7 @@ const [file, setFile] = useState(null);
     if (images) formData.append("images", images);
     if (banner) formData.append("banner", banner);
 
-    await axios.post("http://localhost:3000/api/guestLecture", formData, {
+    await axios.post(`${serverURL}/api/guestLecture`, formData, {
       headers: { "Content-Type": "multipart/form-data" },
     });
 

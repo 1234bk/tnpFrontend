@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { serverURL } from "../../../constant/constant";
 
 const Packageform = () => {
   const [image, setImage] = useState(null);
@@ -20,7 +21,7 @@ const Packageform = () => {
 
     try {
       setStatus("Uploading...");
-      const res = await axios.post("http://localhost:3000/api/addpackage", formData, {
+      const res = await axios.post(`${serverURL}/api/addpackage`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
