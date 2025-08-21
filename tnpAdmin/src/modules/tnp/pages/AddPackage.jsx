@@ -1,5 +1,5 @@
 import React from 'react'
-import Packageform from '../components/packageform'
+import Packageform from '../components/Packageform'
 import Company from '../components/company'
 const AddPackage = () => {
   return (
