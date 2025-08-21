@@ -5,7 +5,7 @@ import './index.css';
 
 import App from './App';
 
-import Quiz from './modules/placementQuiz/pages/quiz';
+// import Quiz from './modules/placementQuiz/pages/quiz';
 
 
 
@@ -72,10 +72,7 @@ const router = createBrowserRouter([
       },
 
 
-      {
-        path: '/quiz',
-        element: <Quiz /> ,
-      },
+      
       {
         path: '/guestaddlecture',
         element: <Guestaddpage /> ,
