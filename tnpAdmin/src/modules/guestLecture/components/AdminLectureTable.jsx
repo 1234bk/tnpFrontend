@@ -25,7 +25,7 @@ export default function AdminLectureTable() {
   // Toggle done
   const toggleDone = async (id) => {
     try {
-      await axios.patch(`http://localhost:3000/api/guestLecture/${id}/toggle`);
+      await axios.patch(`${serverURL}/api/guestLecture/${id}/toggle`);
       setLectures((prev) =>
         prev.map((lec) =>
           lec._id === id ? { ...lec, done: !lec.done } : lec
@@ -39,7 +39,7 @@ export default function AdminLectureTable() {
   // Delete lecture
   const deleteLecture = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/guestLecture/${id}`);
+      await axios.delete(`${serverURL}/api/guestLecture/${id}`);
       setLectures((prev) => prev.filter((lec) => lec._id !== id));
     } catch (err) {
       console.error("Error deleting lecture:", err);
